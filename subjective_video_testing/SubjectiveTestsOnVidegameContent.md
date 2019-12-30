@@ -13,7 +13,7 @@ On the side of e-sports, this year has made records on viewers. [League of Legen
 *League of Legends World Finals 2019. Held in AccorHotels Arena (capacity: 20300), Paris.*
 
 
-The main idea of this whole project was to play around the concept of very specific content. What we wanted to find out is, for different video games and devices, how did the curve of MOS (Mean Opinion Square) vs Quality behaved. These are [well known curves](https://github.com/Netflix/vmaf/blob/master/resource/doc/VMAF_Python_library.md) in the industry of video quality metrics. Another key point was to do so with our own metric: the Lightflow Quality Index (LQI) which is used in our [smart encoding solution](https://lightflow.media/).
+The main idea of this whole project was to play around the concept of very specific content. What we wanted to find out is, for different video games and devices, how did the curve of MOS (Mean Opinion Square) vs Quality behaved. These are [well known curves](https://github.com/Netflix/vmaf/blob/master/resource/doc/VMAF_Python_library.md) in the industry of video quality metrics. Another key point was to do so with our own metric: the Lightflow Quality Index (LQI) which is used in our [smart encoding solution](https://lightflow.media/). It is a video quality metric that ranges from 100 (perfect quality from source) to 0 (very poor quality)
 
 ## Design of the Experiment
 
@@ -32,12 +32,12 @@ Using an integer scale from 1 (bad) to 5 (excelent). We evaluated two video game
 
 *Shadow of the Tomb Raider screenshot.*
 
-We evaluated 10 subjects on two devices:
+We evaluated 9 subjects on two devices:
 
 * PC display: **put dimensions and brand here and setting**
 * Mobile phone: **put dimensions and brand here and setting**. [35% of Twitch users are on mobile](https://muchneeded.com/twitch-statistics/)
 
-Each subject evaluated 16 fragments of Tomb Raider gameplay and 14 fragments of League of Legends for each device. This was done for 8 and 7 different per game respectively, including the source video (each quality was evaluated twice).
+Each subject evaluated 16 fragments of Tomb Raider gameplay and 14 fragments of League of Legends for each device. This was done for 8 and 7 different per game respectively (each quality was evaluated twice). The source video was included in the evaluations and it is represented with an LQI of 100.
 
 
 ## TV Results
@@ -50,6 +50,12 @@ Each subject evaluated 16 fragments of Tomb Raider gameplay and 14 fragments of 
 
 *League of Legends TV Curve*
 
+| Game | Min MOS | Max MOS | Interval |
+|:----:|:-------:|:-------:|:--------:|
+|  TR  |   1.78  |   4.66  |   2.88   |
+|  LoL |   1.90  |   4.30  |   2.40   |
+
+*Table of the TV results*
 
 ## Mobile Results
 
@@ -60,5 +66,13 @@ Each subject evaluated 16 fragments of Tomb Raider gameplay and 14 fragments of 
 ![League of Legends Mobile Curve](./images/LOLMOB.png  "League of Legends Mobile Curve")
 
 *League of Legends Mobile Curve*
+
+| Game | Min MOS | Max MOS | Interval |
+|:----:|:-------:|:-------:|:--------:|
+|  TR  |   3.00  |   4.70  |   1.70   |
+|  LoL |   3.00  |   4.22  |   1.22   |
+
+*Table of the mobile results*
+
 
 ## Conclusions
