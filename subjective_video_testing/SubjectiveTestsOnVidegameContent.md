@@ -99,8 +99,8 @@ The fragments had a length of 10 seconds. The stimuli were spaced by gray frames
 |:---------:|:---------:|
 |  TR - TV  |    0.88   |
 |  LoL -TV  |    0.87   |
-|  TR - Mob |    0.88   |
-| LoL - Mob |    0.87   |
+|  TR - Mob |    0.93   |
+| LoL - Mob |    0.97   |
 
 *Table of [R Squared](https://en.wikipedia.org/wiki/Coefficient_of_determination) values of each linear regression*
 
