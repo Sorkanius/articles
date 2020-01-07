@@ -2,7 +2,7 @@
 
 ## Motivation
 
-At Lightflow Media Technologies we get to spend one day per month to work on our own projects. This quarter we decided to explore the video game industry.
+At [Lightflow Media Technologies](https://lightflow.media/) we get to spend one day per month to work on our own projects, it is called Epic Friday. This quarter we decided to explore the video game industry.
 
 These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [buying PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia has also their on cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these solutions is fascinating, and it is undeniable that video is very important for these solutions.
 
