@@ -34,8 +34,8 @@ Using an integer scale from 1 (bad) to 5 (excelent). We evaluated two video game
 
 We evaluated 9 subjects on two devices:
 
-* PC display: **put dimensions and brand here and setting**
-* Mobile phone: **put dimensions and brand here and setting**. [35% of Twitch users are on mobile](https://muchneeded.com/twitch-statistics/)
+* PC display: the monitor used was HP 24EA, FHD (1920x1080) with an IPS panel and 23.8". The dimensions were 18,3 x 40,8 x 53,9 cm (DxWxH). The distance to the monitor was of 2xH. The subject's head was centered at the display.
+* Mobile phone: the mobile used was a OnePlus 6. It has an AMOLED 2280 x 1080 display. During the tests it was placed on a comfortable position selected by the subject on a sofa. We considered this test to be very relevant since [35% of Twitch users are on mobile](https://muchneeded.com/twitch-statistics/).
 
 Each subject evaluated 16 fragments of Tomb Raider gameplay and 14 fragments of League of Legends for each device. This was done for 8 and 7 different per game respectively (each quality was evaluated twice). The source video was included in the evaluations and it is represented with an LQI of 100.
 
