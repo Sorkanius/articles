@@ -2,9 +2,9 @@
 
 ## Motivation
 
-At [Lightflow Media Technologies](https://lightflow.media/) we get to spend one day per month to work on our own projects, we call it  Epic Friday. This quarter we decided to explore the video game industry.
+At [Lightflow Media Technologies](https://lightflow.media/) we get to spend one day per month to work on our own projects, we call it Epic Friday. This quarter we decided to explore the video game industry.
 
-These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [buying PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia  also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
+These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [buying PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
 
 On the e-sports side, this year has made records on viewers. [League of Legends](https://euw.leagueoflegends.com/en/), by [Riot Games](https://www.riotgames.com/en), 2019 World Finals had a peak of [44 Million viewers and an average per minute of 21 Millions viewers](https://nexus.leagueoflegends.com/en-us/2019/12/2019-world-championship-hits-record-viewership/). This numbers should not be underestimated.
 
