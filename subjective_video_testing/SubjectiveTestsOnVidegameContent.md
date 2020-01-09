@@ -6,7 +6,7 @@ At [Lightflow Media Technologies](https://lightflow.media/) we get to spend one 
 
 These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [buying PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia  also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
 
-On the e-sports side, this year has made records on viewers. [League of Legends](https://euw.leagueoflegends.com/en/), by [Riot Games](https://www.riotgames.com/en), 2019 World Finals  had a peak of [44 Million viewers and an average per minute of 21 Millions viewers](https://nexus.leagueoflegends.com/en-us/2019/12/2019-world-championship-hits-record-viewership/). This numbers should not be underestimated.
+On the e-sports side, this year has made records on viewers. [League of Legends](https://euw.leagueoflegends.com/en/), by [Riot Games](https://www.riotgames.com/en), 2019 World Finals had a peak of [44 Million viewers and an average per minute of 21 Millions viewers](https://nexus.leagueoflegends.com/en-us/2019/12/2019-world-championship-hits-record-viewership/). This numbers should not be underestimated.
 
 ![League of Legends World Finals 2019](./images/finals.jpg  "League of Legends World Finals 2019")
 
@@ -36,7 +36,7 @@ We evaluated 9 subjects on two devices:
 * PC display: the monitor used was a HP 24EA, FHD (1920x1080) with an IPS panel and 23.8". The dimensions were 18,3 x 40,8 x 53,9 cm (DxWxH). The distance to the monitor was of 2xH. The subject's head was centered at the display.
 * Mobile phone: the mobile used was a OnePlus 6. It has an AMOLED 2280 x 1080 6.28" display. During the tests the subject placed itself on a comfortable position on a sofa. We considered this test to be very relevant since [35% of Twitch users are on mobile](https://muchneeded.com/twitch-statistics/).
 
-Each subject evaluated, for each device, 16 fragments of Tomb Raider gameplay and 14 fragments of League of Legends. We only used 8 and 7 different fragments of each game (each quality was evaluated twice). The source video was included in the evaluations and it is represented with an LQI of 100. All the renditions were 1080 except the lowest LQI, which was 720.
+Each subject evaluated, for each device, 16 fragments of Tomb Raider gameplay and 14 fragments of League of Legends. We used 8 and 7 different fragments of each game (each quality was evaluated twice). The source video was included in the evaluations and it is represented with an LQI of 100. All the renditions were 1080 except the lowest LQI, which was 720.
 
 The fragments had a length of 10 seconds. The stimuli were spaced by gray frames of 5 seconds of duration. This was done following the recommendations of the [ITU-T P913](https://www.itu.int/rec/T-REC-P.913/en).
 
