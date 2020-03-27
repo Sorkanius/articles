@@ -4,7 +4,7 @@
 
 At [Haivision](https://www.haivision.com/) we get to spend one day per month to work on our own projects. This quarter we decided to explore the video game industry.
 
-These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [buying PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
+These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [acquiring PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
 
 On the e-sports side, this year has made records on viewers. [League of Legends](https://euw.leagueoflegends.com/en/), by [Riot Games](https://www.riotgames.com/en), 2019 World Finals had a peak of [44 Million viewers and an average per minute of 21 Millions viewers](https://nexus.leagueoflegends.com/en-us/2019/12/2019-world-championship-hits-record-viewership/). This numbers should not be underestimated.
 
@@ -13,7 +13,7 @@ On the e-sports side, this year has made records on viewers. [League of Legends]
 *League of Legends World Finals 2019. Held in AccorHotels Arena (capacity: 20300), Paris.*
 
 
-The main idea of this project was to play around the concept of very specific content. What we wanted to find out is, for different types of video games and devices, how did the curve of MOS (Mean Opinion Square) vs Quality behaved. These are [well known curves](https://www.cns.nyu.edu/~lcv/ssim/) in the industry of video quality metrics. Another key point was to do so with Lightflow's own metric: the Lightflow Quality Index (LQI) which is used in our [smart encoding solution](https://lightflow.media/). It is a video quality metric that ranges from 100 (perfect quality from source) to 0 (very poor quality)
+The main idea of this project was to play around the concept of very specific content. What we wanted to find out is, for different types of video games and devices, how did the curve of MOS (Mean Opinion Square) vs Quality behaved. These are [well known curves](https://www.cns.nyu.edu/~lcv/ssim/) in the industry of video quality metrics. Another key point was to do so with Lightflow's own metric: the Lightflow Quality Index (LQI) which is used in our [smart encoding solution](https://www.haivision.com/products/haivision-lightflow-encode/). It is a video quality metric that ranges from 100 (perfect quality from source) to 0 (very poor quality)
 
 ## Design of the Experiment
 
