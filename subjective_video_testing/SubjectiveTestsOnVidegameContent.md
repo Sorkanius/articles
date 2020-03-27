@@ -115,7 +115,7 @@ The fragments had a length of 10 seconds. The stimuli were spaced by gray frames
 
 ## Acknowledgements
 
-At last thanks to all the Lighflow team, not only for doing the tests, but also for making working with them a complete pleasure. There is not a day on which I do not learn something new because of them. [Lightflow](https://www.haivision.com/products/lightflow/) is a product of our culture and hard work.
+At last thanks to all the Lightflow team, not only for doing the tests, but also for making working with them a complete pleasure. There is not a day on which I do not learn something new because of them. [Lightflow](https://www.haivision.com/products/lightflow/) is a product of our culture and hard work.
 
 A special thanks is dedicated to [Jesús Oliva](https://www.linkedin.com/in/jesusoliva/), for letting us fly and support us in our crazy ideas.
 
