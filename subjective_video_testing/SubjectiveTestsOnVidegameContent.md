@@ -2,7 +2,7 @@
 
 ## Motivation
 
-At [Haivision](https://www.haivision.com/) we get to spend one day per month to work on our own projects, we call it Epic Friday. This quarter we decided to explore the video game industry.
+At [Haivision](https://www.haivision.com/) we get to spend one day per month to work on our own projects. This quarter we decided to explore the video game industry.
 
 These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [buying PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
 
@@ -115,7 +115,7 @@ The fragments had a length of 10 seconds. The stimuli were spaced by gray frames
 
 ## Acknowledgements
 
-At last thanks to all the [Epic team](https://lightflow.media/the-team/), not only for doing the tests, but also for making working with them a complete pleasure. There is not a day on which I do not learn something new because of them. [Lightflow](https://lightflow.media/) is a product of our culture and hard work.
+At last thanks to all the Lighflow team, not only for doing the tests, but also for making working with them a complete pleasure. There is not a day on which I do not learn something new because of them. [Lightflow](https://www.haivision.com/products/lightflow/) is a product of our culture and hard work.
 
 A special thanks is dedicated to [Jesús Oliva](https://www.linkedin.com/in/jesusoliva/), for letting us fly and support us in our crazy ideas.
 
