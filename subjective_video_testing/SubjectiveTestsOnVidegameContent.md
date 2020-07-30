@@ -4,9 +4,9 @@
 
 At [Haivision](https://www.haivision.com/) we get to spend one day per month to work on our own projects. This quarter we decided to explore the video game industry.
 
-These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [acquiring PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://euw.leagueoflegends.com/en/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
+These are exciting times! Google just released [Stadia](https://stadia.google.com/), their cloud gaming platform. Facebook has made their move by [acquiring PlayGiga](https://www.theverge.com/2019/12/19/21029536/facebook-playgiga-cloud-gaming-acquisition-stadia-xcloud-playstation-now). The story does not end up here, Nvidia also has their own cloud gaming platform: [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and so does [Playstation](https://www.playstation.com/en-gb/explore/playstation-now/ps-now-on-pc/). The technology behind these is fascinating, and it is undeniable that video is very important for these solutions.
 
-On the e-sports side, this year has made records on viewers. [League of Legends](https://euw.leagueoflegends.com/en/), by [Riot Games](https://www.riotgames.com/en), 2019 World Finals had a peak of [44 Million viewers and an average per minute of 21 Millions viewers](https://nexus.leagueoflegends.com/en-us/2019/12/2019-world-championship-hits-record-viewership/). This numbers should not be underestimated.
+On the e-sports side, this year has made records on viewers. [League of Legends](https://euw.leagueoflegends.com/en/), by [Riot Games](https://www.riotgames.com/en), 2019 World Finals had a peak of [44 Million viewers and an average per minute of 21 Millions viewers](https://nexus.leagueoflegends.com/en-us/2019/12/2019-world-championship-hits-record-viewership/). These numbers should not be underestimated.
 
 ![League of Legends World Finals 2019](./images/finals.jpg  "League of Legends World Finals 2019")
 
@@ -106,12 +106,12 @@ The fragments had a length of 10 seconds. The stimuli were spaced by gray frames
 5. We can now create a rendition with a **chosen** perceived score (MOS) on a device and video game, which using the model, will give us an LQI that Lightflow will target on the encoding.
 6. All the previous translate to bitrate savings. If we were to reduce by **(0.5 - 1 MOS)** the original rendition, we would save up to:
 
-|    Game   | Original BR (Kbps)  **(MOS)** |   TV (Kbps)  **(MOS)**  |
-|:---------:|:-----------------------------:|:-----------------------:|
-|  TR - TV  |       10522  **(4.66)**       | 5795 (-45%)  **(3.66)** |
-|  LoL -TV  |        2962  **(4.0)**        |  2060 (-30%)  **(3.3)** |
-|  TR - Mob |        10522  **(4.7)**       |  4375 (-58%)  **(3.8)** |
-| LoL - Mob |        2962  **(4.22)**       | 2060 (-30%)  **(3.66)** |
+|    Game   | Original BR (Kbps)  **(MOS)** |   Optimized (Kbps)  **(MOS)**  |
+|:---------:|:-----------------------------:|:------------------------------:|
+|  TR - TV  |       10522  **(4.66)**       | 5795 (-45%)  **(3.66)**        |
+|  LoL -TV  |        2962  **(4.0)**        |  2060 (-30%)  **(3.3)**        |
+|  TR - Mob |        10522  **(4.7)**       |  4375 (-58%)  **(3.8)**        |
+| LoL - Mob |        2962  **(4.22)**       | 2060 (-30%)  **(3.66)**        |
 
 ## Acknowledgements
 
