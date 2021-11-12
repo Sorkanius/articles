@@ -26,37 +26,37 @@ counts <- c(18, 19, 26, 16, 23, 20, 16, 18, 15, 19,
             13, 17, 24, 19, 25, 15, 19, 23, 21, 13,
             17, 22, 20, 22, 23, 21, 20 ,24, 29, 24)
 
-counts.data.frame <- data.frame(robots.down=counts, robots.down=counts/30, index=as.numeric(as.character(factor(row.names(data)))))
+counts.data.frame <- data.frame(bots.down=counts, robots.down=counts/30, index=as.numeric(as.character(factor(row.names(data)))))
 data <- cbind(data, counts.data.frame)
 
 
 
 # patch
 data <- read.table("data.txt")
-colnames(data) <- c("1", "weapon", "distance", "robots.down", "robots.down.prop", "index")
+colnames(data) <- c("1", "weapon", "distance", "bots.down", "robots.down.prop", "index")
 
 
 
 data$weapon <- factor(data$weapon, levels =  c('Sheriff', 'Phantom', 'Vandal'))
 
 ggplot(data) +
-  geom_boxplot(aes(x=weapon, y=robots.down, color=distance))
+  geom_boxplot(aes(x=weapon, y=bots.down, color=distance))
 
 ggplot(data) +
-  aes(x = weapon, y = robots.down, color = distance) +
-  geom_line(aes(group = weapon)) +
-  geom_point()
+  aes(x = distance, color = weapon, group = weapon, y = bots.down) +
+  stat_summary(fun = mean, geom = "point") +
+  stat_summary(fun = mean, geom = "line")
 
-plot(row.names(data), data$kills)
-abline(lm(data$kills ~ row.names(data)), col = 4, lwd = 3)
+plot(row.names(data), data$bots.down)
+abline(lm(data$bots ~ data$index), col = 4, lwd = 3)
 
-fit <- lm(kills ~  index + weapons * distances, data=data, contrasts=list(index="contr.poly"))
+fit <- lm(bots ~  index + weapons * distances, data=data, contrasts=list(index="contr.poly"))
 summary(fit)
 
-fit.anova <- aov(kills ~  weapons * distances, data=data)
+fit.anova <- aov(bots.down ~  weapon * distance + index, data=data)
 summary(fit.anova)
 
-fit.anova.reduced <- aov(kills  ~  weapons + distances, data=data)
+fit.anova.reduced <- aov(bots.down  ~  weapon + distance, data=data)
 summary(fit.anova.reduced)
 
 anova(fit.anova, fit.anova.reduced)
