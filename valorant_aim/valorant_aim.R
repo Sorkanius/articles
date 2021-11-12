@@ -8,8 +8,8 @@ perm.weapons <- rep(weapons, each=n)
 
 length(perm.weapons)
 
-close.distances.data <- data.frame(weapons=perm.weapons, distances=close.distances)
-long.distances.data <- data.frame(weapons=perm.weapons, distances=long.distances)
+close.distances.data <- data.frame(weapon=perm.weapons, distance=close.distances)
+long.distances.data <- data.frame(weapon=perm.weapons, distance=long.distances)
 data <- rbind(close.distances.data, long.distances.data)
 
 set.seed(42)
@@ -26,16 +26,26 @@ counts <- c(18, 19, 26, 16, 23, 20, 16, 18, 15, 19,
             13, 17, 24, 19, 25, 15, 19, 23, 21, 13,
             17, 22, 20, 22, 23, 21, 20 ,24, 29, 24)
 
-counts.data.frame <- data.frame(kills=counts, kills.prop=counts/30, index=as.numeric(as.character(factor(row.names(data)))))
+counts.data.frame <- data.frame(robots.down=counts, robots.down=counts/30, index=as.numeric(as.character(factor(row.names(data)))))
 data <- cbind(data, counts.data.frame)
 
 
+
+# patch
 data <- read.table("data.txt")
-colnames(data) <- c("1", "weapons", "distances", "kills", "kills.prop", "index")
+colnames(data) <- c("1", "weapon", "distance", "robots.down", "robots.down.prop", "index")
 
-boxplot(kills ~ weapons + distances, data=data)
 
-boxplot(kills.prop ~ weapons + distances, data=data)
+
+data$weapon <- factor(data$weapon, levels =  c('Sheriff', 'Phantom', 'Vandal'))
+
+ggplot(data) +
+  geom_boxplot(aes(x=weapon, y=robots.down, color=distance))
+
+ggplot(data) +
+  aes(x = weapon, y = robots.down, color = distance) +
+  geom_line(aes(group = weapon)) +
+  geom_point()
 
 plot(row.names(data), data$kills)
 abline(lm(data$kills ~ row.names(data)), col = 4, lwd = 3)
