@@ -41,13 +41,26 @@ data$weapon <- factor(data$weapon, levels =  c('Sheriff', 'Phantom', 'Vandal'))
 
 ggplot(data, aes(x=weapon, y=bots.down, color=distance)) +
   geom_boxplot() +
-  geom_point(position=position_jitterdodge(jitter.width = 0.1, jitter.height = 0),aes(group=distance))
-
+  geom_point(position=position_jitterdodge(jitter.width = 0, jitter.height = 0.2),aes(group=distance)) +
+  ggtitle("Bots downed per weapon and distance") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ylab("Bots downed")
 
 ggplot(data) +
   aes(x = distance, color = weapon, group = weapon, y = bots.down) +
   stat_summary(fun = mean, geom = "point") +
-  stat_summary(fun = mean, geom = "line")
+  stat_summary(fun = mean, geom = "line") +
+  ggtitle("Average bots downed. Interaction between weapon and distance") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ylab("Bots downed")
+
+ggplot(data, aes(x=index, y=bots.down)) +
+  geom_point() +
+  geom_smooth(method="lm", formula="y ~ x") +
+  ylab("Bots downed") + xlab("Round") +
+  ggtitle("Evolution of downed bots") +
+  theme(plot.title = element_text(hjust = 0.5))
+
 
 plot(row.names(data), data$bots.down)
 abline(lm(data$bots ~ data$index), col = 4, lwd = 3)
