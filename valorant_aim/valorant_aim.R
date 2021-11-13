@@ -39,8 +39,10 @@ colnames(data) <- c("1", "weapon", "distance", "bots.down", "robots.down.prop", 
 
 data$weapon <- factor(data$weapon, levels =  c('Sheriff', 'Phantom', 'Vandal'))
 
-ggplot(data) +
-  geom_boxplot(aes(x=weapon, y=bots.down, color=distance))
+ggplot(data, aes(x=weapon, y=bots.down, color=distance)) +
+  geom_boxplot() +
+  geom_point(position=position_jitterdodge(jitter.width = 0.1, jitter.height = 0),aes(group=distance))
+
 
 ggplot(data) +
   aes(x = distance, color = weapon, group = weapon, y = bots.down) +
@@ -50,7 +52,7 @@ ggplot(data) +
 plot(row.names(data), data$bots.down)
 abline(lm(data$bots ~ data$index), col = 4, lwd = 3)
 
-fit <- lm(bots ~  index + weapons * distances, data=data, contrasts=list(index="contr.poly"))
+fit <- lm(bots.down ~  index + weapon * distance, data=data)
 summary(fit)
 
 fit.anova <- aov(bots.down ~  weapon * distance + index, data=data)
