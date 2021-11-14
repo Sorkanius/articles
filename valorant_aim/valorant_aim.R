@@ -56,6 +56,7 @@ ggplot(data) +
 
 ggplot(data, aes(x=index, y=bots.down)) +
   geom_point() +
+  geom_line(linetype="dotted") +
   geom_smooth(method="lm", formula="y ~ x") +
   ylab("Bots downed") + xlab("Round") +
   ggtitle("Evolution of downed bots") +
