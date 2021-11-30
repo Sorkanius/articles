@@ -1,4 +1,6 @@
 library(ggplot2)
+library(car)
+library(multcomp)
 
 n <- 10
 weapons <- c('Vandal', 'Phantom', 'Sheriff')
@@ -29,14 +31,6 @@ counts <- c(18, 19, 26, 16, 23, 20, 16, 18, 15, 19,
 counts.data.frame <- data.frame(bots.down=counts, robots.down=counts/30, index=as.numeric(as.character(factor(row.names(data)))))
 data <- cbind(data, counts.data.frame)
 
-
-
-# patch
-data <- read.table("data.txt")
-colnames(data) <- c("1", "weapon", "distance", "bots.down", "robots.down.prop", "index")
-
-
-
 data$weapon <- factor(data$weapon, levels =  c('Sheriff', 'Phantom', 'Vandal'))
 
 ggplot(data, aes(x=weapon, y=bots.down, color=distance)) +
@@ -62,22 +56,21 @@ ggplot(data, aes(x=index, y=bots.down)) +
   ggtitle("Evolution of downed bots") +
   theme(plot.title = element_text(hjust = 0.5))
 
-
-plot(row.names(data), data$bots.down)
-abline(lm(data$bots ~ data$index), col = 4, lwd = 3)
-
-fit <- lm(bots.down ~  index + weapon * distance, data=data)
-summary(fit)
-
-fit.anova <- aov(bots.down ~  weapon * distance + index, data=data)
+fit.anova <- aov(bots.down ~  index + weapon * distance, data=data)
+Anova(fit.anova, type="III")
+posth=glht(fit.anova, linfct=mcp(weapon="Tukey")) 
+summary(posth)
 summary(fit.anova)
 
-fit.anova.reduced <- aov(bots.down  ~  weapon + distance, data=data)
+fit.anova.reduced <- aov(bots.down  ~ index + weapon + distance, data=data)
 summary(fit.anova.reduced)
 
 anova(fit.anova, fit.anova.reduced)
 
 
 TukeyHSD(fit.anova.reduced)
-plot(TukeyHSD(fit.anova.reduced))
+
+fit <- lm(bots.down ~  index + weapon * distance, data=data)
+summary(fit)
+
      
