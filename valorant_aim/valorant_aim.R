@@ -1,6 +1,13 @@
 library(ggplot2)
+library(ggpubr)
 library(car)
 library(multcomp)
+library(rstatix)
+library(emmeans)
+library(ggpubr)
+library(dplyr)
+
+
 
 n <- 10
 weapons <- c('Vandal', 'Phantom', 'Sheriff')
@@ -20,7 +27,6 @@ data <- data[rows, ]
 row.names(data) <- NULL
 data
 
-
 counts <- c(18, 19, 26, 16, 23, 20, 16, 18, 15, 19,
             25, 12, 20, 14, 15, 20, 25, 21, 17, 15,
             19, 17, 15, 23, 28, 17, 23, 15, 25, 16,
@@ -28,10 +34,16 @@ counts <- c(18, 19, 26, 16, 23, 20, 16, 18, 15, 19,
             13, 17, 24, 19, 25, 15, 19, 23, 21, 13,
             17, 22, 20, 22, 23, 21, 20 ,24, 29, 24)
 
-counts.data.frame <- data.frame(bots.down=counts, robots.down=counts/30, index=as.numeric(as.character(factor(row.names(data)))))
+counts.data.frame <- data.frame(bots.down=counts, index=as.numeric(as.character(factor(row.names(data)))))
 data <- cbind(data, counts.data.frame)
 
 data$weapon <- factor(data$weapon, levels =  c('Sheriff', 'Phantom', 'Vandal'))
+
+data %>% 
+  group_by(weapon, distance) %>% 
+  summarise(groups = mean(bots.down), bots_sem = (sd(bots.down)/sqrt(length(bots.down)))) -> data.sem
+
+# Box Plot
 
 ggplot(data, aes(x=weapon, y=bots.down, color=distance)) +
   geom_boxplot() +
@@ -40,13 +52,18 @@ ggplot(data, aes(x=weapon, y=bots.down, color=distance)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   ylab("Bots downed")
 
+# Interaction Plot
+
 ggplot(data) +
   aes(x = distance, color = weapon, group = weapon, y = bots.down) +
   stat_summary(fun = mean, geom = "point") +
   stat_summary(fun = mean, geom = "line") +
   ggtitle("Average bots downed. Interaction between weapon and distance") +
   theme(plot.title = element_text(hjust = 0.5)) +
-  ylab("Bots downed")
+  ylab("Bots downed") +
+  ylim(12, 29)
+
+# Evolution Plot
 
 ggplot(data, aes(x=index, y=bots.down)) +
   geom_point() +
@@ -56,21 +73,54 @@ ggplot(data, aes(x=index, y=bots.down)) +
   ggtitle("Evolution of downed bots") +
   theme(plot.title = element_text(hjust = 0.5))
 
-fit.anova <- aov(bots.down ~  index + weapon * distance, data=data)
-Anova(fit.anova, type="III")
-posth=glht(fit.anova, linfct=mcp(weapon="Tukey")) 
-summary(posth)
-summary(fit.anova)
-
-fit.anova.reduced <- aov(bots.down  ~ index + weapon + distance, data=data)
-summary(fit.anova.reduced)
-
-anova(fit.anova, fit.anova.reduced)
+# Linearity Assumption
 
 
-TukeyHSD(fit.anova.reduced)
+ggscatter(
+  data, x = "index", y = "bots.down",
+  facet.by  = c("weapon", "distance"), 
+  short.panel.labs = FALSE
+) +
+  stat_smooth(method = "loess", span = 0.9) +
+  ylab("Bots downed") + xlab("Round")
 
-fit <- lm(bots.down ~  index + weapon * distance, data=data)
-summary(fit)
+# Homogeneity of regression slopes
+
+
+data %>%
+  anova_test(
+    bots.down ~ index + weapon + distance + 
+      weapon*distance + index*weapon +
+      index*distance + index*weapon*distance
+  )
+
+
+# Model
+fit <- lm(bots.down ~ index + weapon*distance, data=data)
+
+# Normality of Residuals
+
+shapiro.test(fit$residuals)
+
+# Homogeneity of variances
+
+fit.metrics <- augment(fit)
+levene_test(.resid ~ weapon*distance, data = fit.metrics)
+
+# Two Way ANCOVA
+data %>%
+  anova_test(
+    bots.down ~ index + weapon*distance
+  )
+
+# Model Comparison, F test
+fit.reduced <- lm(bots.down ~ weapon + distance, data=data)
+anova(fit, fit.reduced)
+
+# Pair to Pair Comparison
+TukeyHSD(aov(bots.down ~ weapon + distance, data=data))
+
+
+
 
      
