@@ -103,7 +103,7 @@ Using the previous **reduced** model, a Tukey HSD (Honest Significant Difference
 * The differences between the Phantom and the Sheriff are not significant. (p-value of `0.8645`).
 * The Vandal produced an average of `5.30` more bots downed than the Sheriff. This value is significant (p-value = `0.0000004`). The 95% Confidence Interval for this parameter is (`3.1954, 7.4046`).
 * The Vandal produced an average of `4.85` more bots downed than the Phantom. This value is significant (p-value = `0.0000024`). The 95% CI for this parameter is (`2.7454, 6.9546`).
-* At long distance, the average of bots downed was `2.5667` **less** than at long distance. This value is significant (p-value = `0.0006838`). The 95% CI for this parameter is (`1.1368, 3.9965`).
+* At long distance, the average of bots downed was `2.5667` **less** than at close distance. This value is significant (p-value = `0.0006838`). The 95% CI for this parameter is (`1.1368, 3.9965`).
 
 ## Conclusions
 
